@@ -16,3 +16,4 @@ class BotTriste(Bot):
 
     def despedida(self):
         return self.comandos['Adeus']
+

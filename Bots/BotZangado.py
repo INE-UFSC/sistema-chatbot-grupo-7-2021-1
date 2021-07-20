@@ -16,3 +16,4 @@ class BotZangado(Bot):
 
     def despedida(self):
         return self.comandos['Adeus']
+
