@@ -34,7 +34,9 @@ class SistemaChatBot:
     def mostra_comandos_bot(self):
         while True:
             self.__bot.mostra_comandos()
-            self.le_envia_comando()
+            escolha = self.le_envia_comando()
+            if escolha == 4:
+                break
 
         ##mostra os comandos disponíveis no bot escolhido
 
@@ -61,6 +63,7 @@ class SistemaChatBot:
                 print('-'*60)
                 print('\u001b[0;1m', end='')
                 break
+        return escolha
         
         ##faz a entrada de dados do usuário e executa o comando no bot ativo
 
