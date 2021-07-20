@@ -23,10 +23,8 @@ class Bot(ABC):
         return self.__comandos
 
     def mostra_comandos(self):
-        counter = 0
-        for cmd in self.comandos.items():
-            print(f'{counter} - {cmd}')
-            counter += 1
+        for pos,cmd in enumerate(self.comandos.keys()):
+            print(f'{pos+1} - {cmd}')
 
     @abstractmethod
     def apresentacao(self):

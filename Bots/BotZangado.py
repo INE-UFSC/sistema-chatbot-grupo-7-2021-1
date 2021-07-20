@@ -1,8 +1,7 @@
 from Bots.Bot import Bot
 
 class BotZangado(Bot):
-    def __init__(self):
-        nome = 'Zangado'
+    def __init__(self, nome):
         comandos = {'Bom dia': 'F*da-se', 'Qual seu nome?':'Te interessa?', 'Quero um conselho':'Vai embora!', 'Adeus':'Espero que não volte!'}
         super().__init__(nome, comandos)
 
@@ -13,7 +12,7 @@ class BotZangado(Bot):
         return self.comandos[cmd]
 
     def boas_vindas(self):
-        return '--> Zangado diz: Não quero papo hoje...'
+        return f'Não quero papo hoje...'
 
     def despedida(self):
         return self.comandos['Adeus']
